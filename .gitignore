@@ -19,3 +19,4 @@ firebase-debug.log*
 # files for live demo
 /.firebase
 /.firebaserc
+/.firebase.json
