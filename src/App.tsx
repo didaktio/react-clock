@@ -6,17 +6,17 @@ import logo from './logo.svg';
 /* ------- Components START ------- */
 export const App = () => (
   <div className="App">
-    <Timer />
+    <Clock />
   </div>
 );
 
 
-const Timer = () => {
-  const [{ isOn, seconds }, setState] = useState({ isOn: false, seconds: 0 } as TimerState),
+const Clock = () => {
+  const [{ isOn, seconds }, setState] = useState({ isOn: false, seconds: 0 } as ClockState),
     tickerId = useRef(null as any),
-    handleButtonClick = ({ target: { className } }: TimerButtonEvent) => setState(state =>
-      className === 'Timer__start-button' ? { ...state, isOn: true }
-        : className === 'Timer__stop-button' ? { ...state, isOn: false }
+    handleButtonClick = ({ target: { className } }: ClockButtonEvent) => setState(state =>
+      className === 'Clock__start-button' ? { ...state, isOn: true }
+        : className === 'Clock__stop-button' ? { ...state, isOn: false }
           : { ...state, seconds: 0 });
 
   useEffect(() => {
@@ -25,15 +25,15 @@ const Timer = () => {
   }, [isOn]);
 
   return (
-    <div className="Timer">
-      <img src={logo} alt="React logo" className={`Timer__image${seconds ? ' Timer__image--animation' : ''}${seconds ? (isOn ? ' Timer__image--play' : ' Timer__image--pause') : ''}`} />
-      <div className="Timer__time">
+    <div className="Clock">
+      <img src={logo} alt="React logo" className={`Clock__image${seconds ? ' Clock__image--animation' : ''}${seconds ? (isOn ? ' Clock__image--play' : ' Clock__image--pause') : ''}`} />
+      <div className="Clock__time">
         <Time seconds={seconds} />
       </div>
-      <div className="Timer__buttons" onClick={e => handleButtonClick(e as any as TimerButtonEvent)}>
-        <button disabled={isOn} className="Timer__start-button">Start</button>
-        <button disabled={!isOn} className={`Timer__stop-button${!isOn ? ' Timer__button--disabled' : ''}`}>Stop</button>
-        <button className="Timer__reset-button">Reset</button>
+      <div className="Clock__buttons" onClick={e => handleButtonClick(e as any as ClockButtonEvent)}>
+        <button disabled={isOn} className="Clock__start-button">Start</button>
+        <button disabled={!isOn} className={`Clock__stop-button${!isOn ? ' Clock__button--disabled' : ''}`}>Stop</button>
+        <button className="Clock__reset-button">Reset</button>
       </div>
     </div>
   );
@@ -101,15 +101,15 @@ const secsToHHMMSS = (seconds: number) => {
   return `${hrs}:${mins}:${secs}`.split('.')[0];
 }
 
-interface TimerButtonsElement extends HTMLDivElement {
+interface ClockButtonsElement extends HTMLDivElement {
   className: string;
 }
 
-interface TimerButtonEvent extends SyntheticEvent {
-  target: TimerButtonsElement;
+interface ClockButtonEvent extends SyntheticEvent {
+  target: ClockButtonsElement;
 }
 
-interface TimerState {
+interface ClockState {
   isOn: boolean;
   seconds: number;
 }

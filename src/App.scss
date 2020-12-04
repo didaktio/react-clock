@@ -4,15 +4,15 @@
     align-items: center;
     justify-content: center;
 
-    .Timer {
+    .Clock {
 
-        .Timer__image {
+        .Clock__image {
             height: 40vmin;
             pointer-events: none;
             will-change: transform;
 
             @media (prefers-reduced-motion: no-preference) {
-                &.Timer__image--animation {
+                &.Clock__image--animation {
                     @keyframes App-logo-spin {
                         from {
                             transform: rotate(0deg);
@@ -25,18 +25,18 @@
 
                     animation: App-logo-spin infinite 20s linear;
 
-                    &.Timer__image--play {
+                    &.Clock__image--play {
                         animation-play-state: running;
                     }
 
-                    &.Timer__image--pause {
+                    &.Clock__image--pause {
                         animation-play-state: paused;
                     }
                 }
             }
         }
 
-        .Timer__time {
+        .Clock__time {
 
             .Time {
                 position: relative;
@@ -79,7 +79,7 @@
             }
         }
 
-        .Timer__buttons {
+        .Clock__buttons {
             display: flex;
             justify-content: center;
 
@@ -94,7 +94,7 @@
                     transform: scale(1.2);
                 }
 
-                &.Timer__button--disabled {
+                &.Clock__button--disabled {
                     cursor: unset;
 
                     &:hover {
