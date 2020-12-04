@@ -1,7 +1,7 @@
-# React Timer
+# React Clock
 
 A simple React clock utilising:
-* [TypeScript](https://create-react-app.dev/docs/adding-typescript/)*
+* [TypeScript](https://create-react-app.dev/docs/adding-typescript/)
 * [SCSS](https://sass-lang.com/)
 * [Hooks](https://reactjs.org/docs/hooks-intro.html)
 * [Functional Components](https://reactjs.org/docs/components-and-props.html)
