@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "React Clock",
+  "name": "React Clock",
+  "description": "Learn to think in React with an apparently simple clock app. Time is ticking.",
   "icons": [
     {
       "src": "favicon.ico",
