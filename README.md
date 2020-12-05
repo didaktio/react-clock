@@ -18,6 +18,14 @@ A simple React clock utilising:
 
 **LIVE**: https://react-clock.didakt.io
 
+## Overkill Manual
+* **Start**: Click the `Start` button.
+* **Stop**: Click the `Stop` button.
+* **Reset**: Click the `Reset`button.
+* **Speed**: Click the React logo to open a popover from which you can select a different speed.
+* **Format**: Click the time to open a popover from which you can select a different format.
+* **Save**: No need; progress is saved automatically. You can close the tab, quit the browser, turn off your device &mdash; just navigate back and you'll be right where you left off!
+
 ## Getting Started
 1) Clone or download the repo into a fresh folder on your machine with `git clone https://github.com/didaktio/react-clock.git`.
 2) Run `npm install` from the project root to install dependencies.
